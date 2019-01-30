@@ -11,6 +11,10 @@
 - support of multiple coins (Bitcoin and Ethereum type), with easy extensibility for other coins
 - scripts for easy creation of debian packages for backend and blockbook
 
+# Quick guide for server deploy
+
+Build and deploy guide is [here](/docs/server.md). (Ubuntu 16.04, 18.04, etc)
+
 ## Build and installation instructions
 
 Officially supported platform is **Debian Linux** and **AMD64** architecture.
