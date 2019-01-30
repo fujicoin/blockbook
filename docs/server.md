@@ -87,6 +87,7 @@ cd ~/
 mkdir fujicoin
 wget https://download.fujicoin.org/fujicoin-v0.16.3.1/fujicoin-0.16.3-x86_64-linux-gnu.tar.gz  # for example
 tar -xzvf fujicoin-0.16.3-x86_64-linux-gnu.tar.gz
+mv bin/* .
 ./fujicoind
 ```
 Confirm synchronization:
