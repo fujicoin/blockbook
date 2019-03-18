@@ -153,11 +153,14 @@ Add below, for example:
                         Order deny,allow
                         Allow from all
                 </Proxy>
-                        ProxyPass /socket.io/ wss://localhost:9148/socket.io/
-                        ProxyPassReverse /socket.io/ wss://localhost:9148/socket.io/
 
-                        ProxyPass / https://localhost:9148/
-                        ProxyPassReverse / https://localhost:9148/
+                ProxyPass /socket.io/ wss://localhost:9148/socket.io/
+                ProxyPassReverse /socket.io/ wss://localhost:9148/socket.io/
+
+                ProxyPass / https://localhost:9148/
+                ProxyPassReverse / https://localhost:9148/
+
+                Header set Access-Control-Allow-Origin "*"
 
         </VirtualHost>
 ```
@@ -165,6 +168,7 @@ Restart apache2:
 ```
 a2enmod proxy_http
 a2enmod proxy_wstunnel
+a2enmod headers
 service apache2 restart
 ```
 
